@@ -75,7 +75,7 @@ case $choice in
     return
     ;;
 9)
-    swww img ${DIR}/old.jpg --transition-fps 30 --transition-type any --transition-duration 3
+    swww img ${DIR}/old.png --transition-fps 30 --transition-type any --transition-duration 3
     return
     ;;
 10)
