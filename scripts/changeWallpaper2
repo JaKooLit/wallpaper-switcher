@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR=$HOME/00shared-drives/500G-NVME/wallpapers/
+DIR=$HOME/Pictures/wallpapers/
 PICS=($(ls ${DIR}))
 
 RANDOMPICS=${PICS[ $RANDOM % ${#PICS[@]} ]}
