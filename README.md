@@ -1,95 +1,26 @@
 https://user-images.githubusercontent.com/85185940/235467796-54c2cdcf-cf62-4596-8528-cc545566ceb4.mp4
 
-
 <br>
-<h3 align = "center"> Arch / Gentoo Hyprland Dotfiles</h3>
+<h3 align = "center"> swww wallpaper switcher for Hyprland, Sway or any other wlr-root based distros</h3>
 <br>
-
-<img src="https://github.com/JaKooLit/Ja_HyprLanD-dots/blob/main/preview/Arch.png" alt="">
 
 ## Components:
 
-- Main Component:[`Hyprland`](https://github.com/hyprwm/Hyprland)
-- Terminal: [`Foot`](https://github.com/r-c-f/foot)
-- Status bar: [`Waybar`](https://github.com/Alexays/Waybar)
-- Menu : [`Wofi`](https://hg.sr.ht/~scoopta/wofi)
-- FIle Manager: [`Thunar`](https://docs.xfce.org/xfce/thunar/start)
+- Main Component:[`swww`](https://github.com/Horus645/swww)
+- sub component: [`wofi`](https://hg.sr.ht/~scoopta/wofi) - this is needed for switcher script
 
-## Miscellaneous:
+## ✨ NOTE:
 
-- Themes: `Dracula`
-- Cursor theme: `Bibata Modern Ice`
+- I have tested both on Gnome and Plasma Wayland HOWEVER, I have ran into issues like wallpaper not being persistent
 
-## Needed packages:
+## ✨ Installation and usage:
 
-(all of the above components) plus
+1.) Install swwww (Arch Linux available in AUR swww and swww-git), Gentoo, is available in GURU overlay. Please check swww github page or you can build from source
 
-`swaybg` - for wallpaper
+2.) Inorder to use wallpaper-switcher, wofi have to be installed
 
-`swayidle` - not necessary but you can install
+3.) Users who previously used my scripts for installing Hyprland, need to rename or update the wallpaper.
 
-`swaylock-effects` - or swaylock
+4.) To use your own wallpaper for wallpaper-switcher, edit as required. Its important to change the directory and wallpaper name else script will fail
 
-`wlroots` `wlogout` `cava` `polkit-gnome`
-
-`mako` - for notifications
-
-`grim` `slurp` `wl-clipboard` - for screenshot
-
-`brightnessctl`  - for monitor and keyboard brightness - not needed for desktop
-
-`mpv` - for wofi beats to work
-
-`viewnior` or `swayimg`  
-
-`pamixer` - for volume control notification. 
-
-`playerctl` - Keyboard hotkeys multimedia controls
-
-`xorg-xwayland` - needed to run some non-wayland app especially games
-
-`fonts` - required awesome fonts. AUR and official repo have... else most of the waybar modules wont work. Most of configs here I used Fantasque Sans Mono. I used Cascadia Code Semibold Italic on foot.
-
-`pipewire` - needed pipewire pipewire-pulse pipewire-alsa
-
-
-## ✨ Arch Linux quick Installation:
-
-A guide to install :[`Youtube Link`](https://youtu.be/_deaeSU1WK8)
-
-Dual Boot Guide :[`Youtube Link`](https://www.youtube.com/watch?v=ADYqS8psSJ0)
-
-1.) optional: you can install nvidia-all driver from Frogging Family to replace the nvidia-drivers 
- - chmod +x nvidia-all-driver and run with nvidia-all-driver
-
-a.) paru-hyprland and yay-hyprland autoinstaller script included. Paru / Yay will be installed automatically if you select yes during the installation. 
-Make script executable by running chmod +x (for example chmod +x paru-hyprland) then ran ./paru-hyprland.
-
-b.) You can install one by one packages or choose the automatic installer script.
-
-c.) If you want to add or edit packages, edit yay-hyprland or paru-hyprland script. Ensure packages are present on AUR or official else the script will fail.
-
-d.) Installation of Asus-ROG-utilities are entirely optional. This is only for Asus Laptop. if you select no, will skip the step.
-
-## ✨ NVIDIA-Hyprland notes:
-- kindly note, on configs I added all the nvidia variables from Hyprland wiki [`Link`](https://wiki.hyprland.org/Nvidia/) but by default they are not enabled. I've had issues like OBS not recording, or intermittent crashing etc, on my laptop. Check the ~/.config/hypr/configs/exec.conf and uncomment one by one to try. You can read through Hyprland-Wiki for some guidance.
-
-## ✨ Manual Installation and Notes: 
-#### you can copy, create, change, however, would appreciate to submit like a pull request or issues if you have a better solution / changes so we will all improve :)
-
-These configs are used in my Laptop and Desktop. 
-Please note, Only provided are configs. Any Hyprland-related issues to be reported on Hyprland Github
-
-a.) Copy / Move files / folders in your ~/.config
-
-b.) Put wallpapers in your ~/Pictures/
-
-c.) if you want in Arch, make sure to comment / uncomment some items in /hypr/configs/exec.conf - location of polkit is different than gentoo, By default, all configs are set to work with Arch Linux
-
-d.) If you use `thunar` as file manager, suggested additions for thunar (thunar-volman, tumbler, gvfs, gvfs-mtp (for accessing phone), Thunar archive plugin-ins) See Arch wiki https://wiki.archlinux.org/title/thunar
-
-e.) make sure scripts located at /hypr/scripts/ are executable as required. (use chmod +x or right click, properties, change permission to be executable)
-
-f.) Inspect /hypr/configs/exec.conf Choose which polkit gnome to use. to use. (Gentoo have different location of executables. Arch /usr/lib vs Gentoo /usr/libexec) Polkits by default are set to Arch Linux
-
-g.) if you have azerty keyboard [`this`](https://github.com/swaywm/sway/issues/1460?fbclid=IwAR1C8VcY_wWbGhXvT-5ApjJCQuJoJzhOVor6o5fdn0Nj1c6bD9JXoQAPQIg) might help
+5.) Will integrate both scripts in my previous Hyprland install
