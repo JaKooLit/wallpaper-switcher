@@ -1,4 +1,5 @@
-https://github.com/JaKooLit/wallpaper-switcher/blob/main/preview/swww.mkv
+https://user-images.githubusercontent.com/85185940/235467796-54c2cdcf-cf62-4596-8528-cc545566ceb4.mp4
+
 
 <br>
 <h3 align = "center"> Arch / Gentoo Hyprland Dotfiles</h3>
