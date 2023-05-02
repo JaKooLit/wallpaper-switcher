@@ -85,4 +85,4 @@ case $choice in
 esac
 }
 
-killall -f  || main
+killall -f || main
