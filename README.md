@@ -21,7 +21,7 @@ Youtube Video Link here
 
 1.) Install swwww (Arch Linux available in AUR swww and swww-git), Gentoo, is available in GURU overlay. Please check swww github page or you can build from source
 
-2.) Inorder to use wallpaper-switcher, wofi have to be installed
+2.) Inorder to use wallpaper-switcher, wofi have to be installed. I upload a wofi config folder. You can put this folder inside ~/.config
 
 3.) Users who previously used my scripts for installing Hyprland, need to rename or update the wallpaper.
 
