@@ -11,10 +11,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
-      with:
-        # Specify the version that supports Node.js 16
-        ref: v2.4.3
+      uses: actions/checkout@latest
 
     - name: Create tar.gz and .zip archives
       run: |
