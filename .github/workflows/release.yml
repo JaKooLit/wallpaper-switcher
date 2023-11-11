@@ -1,0 +1,26 @@
+name: Create Release Archives
+
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Create tar.gz and .zip archives
+      run: |
+        tar -czf release-${{ github.event.release.tag_name }}.tar.gz -C $GITHUB_WORKSPACE .
+        zip -r release-${{ github.event.release.tag_name }}.zip $GITHUB_WORKSPACE/*
+        mv release-*.tar.gz release-*.zip $GITHUB_WORKSPACE
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: release-artifacts
+        path: $GITHUB_WORKSPACE
