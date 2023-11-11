@@ -15,10 +15,19 @@ jobs:
 
     - name: Create tar.gz and .zip archives
       run: |
-        # Exclude files or directories causing the "file changed" issue
-        tar --exclude='./.git*' --exclude='./temp*' -czf release-${{ github.event.release.tag_name }}.tar.gz -C $GITHUB_WORKSPACE .
-        zip -r release-${{ github.event.release.tag_name }}.zip $GITHUB_WORKSPACE/*
+        # Create a temporary directory
+        temp_dir=$(mktemp -d)
+        cp -R $GITHUB_WORKSPACE/. $temp_dir
+
+        # Create the archives from the temporary directory
+        tar -czf release-${{ github.event.release.tag_name }}.tar.gz -C $temp_dir .
+        zip -r release-${{ github.event.release.tag_name }}.zip $temp_dir/*
+
+        # Move the archives to the workspace
         mv release-*.tar.gz release-*.zip $GITHUB_WORKSPACE
+
+        # Clean up the temporary directory
+        rm -rf $temp_dir
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v2
