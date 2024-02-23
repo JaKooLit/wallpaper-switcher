@@ -19,7 +19,7 @@ Youtube Video Link here
 
 ## ✨ Installation and usage:
 
-1.) Install swwww (Arch Linux available in AUR swww and swww-git), Gentoo, is available in GURU overlay. Please check swww github page or you can build from source
+1.) Install swww (Arch Linux available in AUR swww and swww-git), Gentoo, is available in GURU overlay. Please check swww github page or you can build from source
 
 2.) Inorder to use wallpaper-switcher, wofi have to be installed. I upload a wofi config folder. You can put this folder inside ~/.config
 
