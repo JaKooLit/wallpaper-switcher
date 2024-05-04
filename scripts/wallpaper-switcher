@@ -37,7 +37,7 @@ printf "9. old\n"
 printf "10. random"
 }
 
-swww query || swww init
+swww query || swww-daemon
 
 main() {
 choice=$(menu | ${wofi_command} | cut -d. -f1)
