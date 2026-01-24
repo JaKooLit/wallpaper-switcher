@@ -34,6 +34,7 @@ RANDOM_PIC_NAME="Shuffle: $CLEAN_RANDOM (${#PICS[@]} images)"
 # Menu Function
 menu() {
     echo "$RANDOM_PIC_NAME"
+    # Adds an option to set a random wallpaper as Wofi background
     echo "Random Wofi Backgound"
     # Just list the names without extensions
     printf "%s\n" "${PICS[@]}" | sed -E 's/\.(jpg|jpeg|png|gif)$//i'
@@ -65,6 +66,9 @@ main() {
         swww img "${DIR}/${RANDOM_PIC}" $SWWW_PARAMS && wallust run "${DIR}/${RANDOM_PIC}" && hyprctl reload
         return
     fi
+    # Adds a file name "background.png" to the Wofi config folder for Wofi backgrounds.
+    #To Use the background in Wofi, set the "background" parameter in the Wofi style.css to:
+    # background: url($HOME/.config/wofi/background.png);
     if [ "$choice" = "Random Wofi Backgound" ]; then
         cp ${DIR}/${RANDOM_PIC} $HOME/.config/wofi/background.png
         return
